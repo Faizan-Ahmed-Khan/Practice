@@ -1,10 +1,11 @@
 package com.demo.practice.ds;
 
 import java.util.LinkedList;
+import java.util.Optional;
 import java.util.Queue;
 
 /**
- * Stack Implementation using Queue
+ * Stack Implementation using Queue --> Stue
  * 
  * @author faizan.ahmed
  */
@@ -35,20 +36,20 @@ public class Stue {
 
 	private void pop() {
 
-		while (!q1.isEmpty()) {
-			if (q1.size() == 1) {
-				System.out.println("Element Poped:: " + q1.peek());
-				q1.poll();
-			} else {
-				q2.add(q1.poll());
-			}
-		}
+		System.out.println("------------");
 
-		while (!q2.isEmpty()) {
-			q1.add(q2.poll());
+		while (!q1.isEmpty() && q1.size() != 1) {
+			q2.add(q1.poll());
 		}
-		System.out.println(q1);
-		System.out.println(q2);
+		if (Optional.ofNullable(q1.peek()).isPresent()) {
+			System.out.println("Element Popped ::: " + q1.peek());
+			System.out.println("Remaining elements:: " + q1);
+		} else {
+			System.out.println("No Elements to POP");
+		}
+		q1 = q2;
+		q2 = new LinkedList<>();
+
 	}
 
 }

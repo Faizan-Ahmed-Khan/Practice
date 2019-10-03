@@ -15,9 +15,12 @@ public class Quack {
 	public static void main(String[] args) {
 
 		Quack q = new Quack();
-//		q.enque(1);
-//		q.enque(2);
-//		q.enque(3);
+		q.enque(1);
+		q.enque(2);
+		q.enque(3);
+		q.deque();
+		q.deque();
+		q.deque();
 		q.deque();
 	}
 
@@ -28,14 +31,7 @@ public class Quack {
 	 */
 	private void enque(int elt) {
 
-		while (!s1.isEmpty()) {
-			s2.push(s1.pop());
-		}
-		s2.push(elt);
-
-		while (!s2.isEmpty()) {
-			s1.push(s2.pop());
-		}
+		s1.push(elt);
 		System.out.println(s1);
 	}
 
@@ -44,12 +40,17 @@ public class Quack {
 	 */
 	private void deque() {
 
-		if (s1.isEmpty())
-			System.out.println("no elements to POP");
-		else {
-			System.out.println("Item removed::" + s1.pop());
-			System.out.println("remaining items in stack:: " + s1);
+		if (s2.isEmpty()) {
+			while (!s1.isEmpty()) {
+				s2.push(s1.pop());
+			}
 		}
+		if (!s2.isEmpty()) {
+			System.out.println("Item removed::" + s2.pop());
+			System.out.println("remaining items in stack:: " + s2);
+		} else
+			System.out.println("No Elements to DeQueue");
+
 	}
 
 }
