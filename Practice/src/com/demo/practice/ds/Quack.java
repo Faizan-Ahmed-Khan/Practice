@@ -19,6 +19,7 @@ public class Quack {
 		q.enque(2);
 		q.enque(3);
 		q.deque();
+		q.enque(4);
 		q.deque();
 		q.deque();
 		q.deque();
