@@ -1,4 +1,4 @@
-package com.demo.practice.ds;
+package com.demo.practice.ds.arrays;
 
 import java.util.Collections;
 import java.util.Comparator;

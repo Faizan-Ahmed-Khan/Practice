@@ -1,4 +1,4 @@
-package com.demo.practice.ds;
+package com.demo.practice.ds.stacks;
 
 import java.util.Stack;
 

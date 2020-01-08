@@ -1,4 +1,4 @@
-package com.demo.practice.ds.arrays;
+package com.demo.practice.algorithms.sort;
 
 import java.util.Scanner;
 

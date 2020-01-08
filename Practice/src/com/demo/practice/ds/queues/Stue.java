@@ -1,4 +1,4 @@
-package com.demo.practice.ds;
+package com.demo.practice.ds.queues;
 
 import java.util.LinkedList;
 import java.util.Optional;
